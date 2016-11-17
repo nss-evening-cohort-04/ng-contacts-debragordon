@@ -1,0 +1,22 @@
+{
+  "name": "angular-contact-app",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Debra Gordon <debra.m.gordon@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/debragordon",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "bootstrap": "^3.3.7",
+    "angular": "^1.5.8"
+  }
+}
