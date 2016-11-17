@@ -4,3 +4,9 @@
 
 body {
   color: darkgray; }
+
+.container {
+  margin-top: 20px; }
+
+#top-logo {
+  width: 150px; }
