@@ -10,3 +10,11 @@ body {
 
 #top-logo {
   width: 150px; }
+
+.panel-default {
+  border: none;
+  background: white; }
+
+.panel-default > .panel-heading {
+  background: white;
+  border: none; }
