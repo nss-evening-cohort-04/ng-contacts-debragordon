@@ -22,6 +22,10 @@ app.controller("ContactCtrl", function ($scope, ContactFactory){
     $scope.showListView = false;
   };
 
+  $scope.showFavs = function(){
+    $scope.showListView = true;
+  };
+
   $scope.addNewContact = function(){
     ContactFactory.postNewContact($scope.newContact).then(function(itemId){
       getContacts();
