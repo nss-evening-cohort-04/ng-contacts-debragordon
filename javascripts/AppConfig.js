@@ -1,3 +1,5 @@
 "use strict";
 
-console.log("AppConfig.js connected");
+app.run(function(FIREBASE_CONFIG){
+  firebase.initializeApp(FIREBASE_CONFIG);
+});
