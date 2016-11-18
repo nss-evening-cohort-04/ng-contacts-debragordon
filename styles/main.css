@@ -11,6 +11,9 @@ body {
 #top-logo {
   width: 150px; }
 
+.fa-address-book {
+  color: white; }
+
 .panel-default {
   border: none;
   background: white; }
