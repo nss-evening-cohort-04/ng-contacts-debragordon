@@ -4,7 +4,8 @@
     <div class="panel-body">
       <div class="row">
         <div class="col-xs-11">{{contact.firstName}} {{contact.lastName}}</div>
-        <div class="col-xs-1"><button class="btn btn-danger fa fa-trash-o"></button></div>
+        <div class="col-xs-1"><button class="btn btn-danger fa fa-pencil" ng-click="editContact()"> EDIT</button></div>
+        <div class="col-xs-1"><button class="btn btn-danger fa fa-trash-o" ng-click="deleteContact()"></button></div>
         <div class="row">
           <div class="col-xs-6">
             <div class="col-xs-6">

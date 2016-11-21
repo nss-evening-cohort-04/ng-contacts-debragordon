@@ -12,7 +12,7 @@
     <div class="container"><!-- TOP HEADER-->
       <div class="row">
         <div class="col-sm-2 col-sm-offset-10">
-          <a href="#" class="btn btn-warning text-center center-block"><span class="fa fa-sign-out" aria-hidden="true"></span> Log out</a>
+          <a href="#" class="btn btn-warning text-center center-block" ng-click="logoutUser()"><span class="fa fa-sign-out" aria-hidden="true"></span> Log out</a>
         </div>
       </div>
       <div class="row">
@@ -28,23 +28,23 @@
     <div class="container"><!-- TOP Buttons -->
       <div class="row">
         <div class="col-sm-3">
-          <button class="btn btn-info btn-block btn-lg" ng-click="newContact()"><span><i class="fa fa-plus" aria-hidden="true"></i></span> Add New</button>
+          <button class="btn btn-info btn-block btn-lg" ng-click="newContactForm()"><span><i class="fa fa-plus" aria-hidden="true"></i></span> Add New</button>
         </div>
         <div class="col-sm-3">
-          <button class="bt btn-info btn-block btn-lg" ng-click="allContacts()"><span><i class="fa fa-address-book fa-2" aria-hidden="true"></i></span> All Contacts</button>
+          <button class="bt btn-info btn-block btn-lg" ng-click="allContactList()"><span><i class="fa fa-address-book fa-2" aria-hidden="true"></i></span> All Contacts</button>
         </div>
         <div class="col-sm-3">
-          <button class="btn btn-info btn-block btn-lg" ng-click="showFavs()"><span><i class="fa fa-star" aria-hidden="true"></i></span> Favorites</button>
+          <button class="btn btn-info btn-block btn-lg" ng-click="showFavsList()"><span><i class="fa fa-star" aria-hidden="true"></i></span> Favorites</button>
         </div>
         <div class="col-sm-3">
-          <button class="btn btn-info btn-block btn-lg" ng-click="showGroups()"><span><i class="fa fa-users" aria-hidden="true"></i></span> Groups</button>
+          <button class="btn btn-info btn-block btn-lg" ng-click="showGroupList()"><span><i class="fa fa-users" aria-hidden="true"></i></span> Groups</button>
         </div>
       </div>
     </div>
 
   </div>
 
-  <div class="container" ng-controller="ContactCtrl">
+  <div class="container" ng-view>
 
   </div>
 
