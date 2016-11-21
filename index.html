@@ -27,14 +27,17 @@
 
     <div class="container"><!-- TOP Buttons -->
       <div class="row">
-        <div class="col-sm-4">
+        <div class="col-sm-3">
           <button class="btn btn-info btn-block btn-lg" ng-click="newContact()"><span><i class="fa fa-plus" aria-hidden="true"></i></span> Add New</button>
         </div>
-        <div class="col-sm-4">
-          <button class="btn btn-info btn-block btn-lg" ng-click="allContacts()"><span><i class="fa fa-address-book fa-2" aria-hidden="true"></i></span> All Contacts</button>
+        <div class="col-sm-3">
+          <button class="bt btn-info btn-block btn-lg" ng-click="allContacts()"><span><i class="fa fa-address-book fa-2" aria-hidden="true"></i></span> All Contacts</button>
         </div>
-        <div class="col-sm-4">
-          <button class="btn btn-info btn-block btn-lg" ng-click="showFavs()"><span><i class="fa fa-star" aria-hidden="true"></i></span> Favorites | Groups</button>
+        <div class="col-sm-3">
+          <button class="btn btn-info btn-block btn-lg" ng-click="showFavs()"><span><i class="fa fa-star" aria-hidden="true"></i></span> Favorites</button>
+        </div>
+        <div class="col-sm-3">
+          <button class="btn btn-info btn-block btn-lg" ng-click="showGroups()"><span><i class="fa fa-users" aria-hidden="true"></i></span> Groups</button>
         </div>
       </div>
     </div>
@@ -60,7 +63,8 @@
   <script src="/javascripts/controllers/ContactAllCtrl.js"></script>
   <script src="/javascripts/controllers/ContactFavsCtrl.js"></script>
   <script src="/javascripts/controllers/ContactLoginCtrl.js"></script>
-
+  <script src="/javascripts/controllers/ContactGroupsCtrl.js"></script>
+  <script src="/javascripts/controllers/ContactLogoutCtrl.js"></script>
 
 </body>
 </html>
