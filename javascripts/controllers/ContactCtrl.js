@@ -14,17 +14,17 @@ app.controller("ContactCtrl", function ($scope, ContactFactory){
 
   getContacts();
 
-  $scope.allContacts = function(){
-    $scope.showListView = true;
-  };
+  // $scope.allContacts = function(){
+  //   $scope.showListView = false;
+  // };
 
-  $scope.newContact = function(){
-    $scope.showListView = false;
-  };
+  // $scope.newContact = function(){
+  //   $scope.showListView = false;
+  // };
 
-  $scope.showFavs = function(){
-    $scope.showListView = true;
-  };
+  // $scope.showFavs = function(){
+  //   $scope.showListView = false;
+  // };
 
   $scope.addNewContact = function(){
     ContactFactory.postNewContact($scope.newContact).then(function(itemId){
