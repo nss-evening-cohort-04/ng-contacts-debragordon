@@ -19,6 +19,10 @@ app.config(function($routeProvider){
       controller: 'ContactsFavsCtrl'
     })
     .when('/contacts/list', {
+      templateUrl: 'partials/all-groups.html',
+      controller: 'ContactsGroupsCtrl'
+    })
+    .when('/contacts/list', {
       templateUrl: 'partials/login.html',
       controller: 'ContactsLoginCtrl'
     })
