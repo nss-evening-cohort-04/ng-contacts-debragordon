@@ -12,6 +12,7 @@ app.factory("ContactFactory", function($q, $http, FIREBASE_CONFIG) {
             contacts.push(response[key]);
           });
           resolve(contacts);
+          console.log("contacts", contacts);
         })
         .error(function(errorResponse){
           reject(errorResponse);
