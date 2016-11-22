@@ -1,9 +1,17 @@
 "use strict";
 
-app.controller("ContactNewCtrl", function ($scope, ContactFactory){
+app.controller("ContactNewCtrl", function ($scope, $location, ContactFactory){
+  $scope.newContact = {};
 
-// clearContactForm FUNCTION
+  $scope.addNewContact = function(){
+    ContactFactory.postNewContact($scope.newContact).then(function(itemId){
+      $location.url('/contacts/list');
+      clearContactForm();
+    });
+  };
 
-// addNewContact FUNCTION
+  $scope.clearContactForm = function(){
+    $scope.newContact = {};
+  };
 
 });
