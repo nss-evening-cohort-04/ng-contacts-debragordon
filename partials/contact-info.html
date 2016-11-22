@@ -3,7 +3,7 @@
   <div class="panel panel-default">
     <div class="panel-body">
       <div class="row">
-        <div class="col-xs-11">{{contact.firstName}} {{contact.lastName}}</div>
+        <div class="col-xs-10">{{contact.firstName}} {{contact.lastName}}</div>
         <div class="col-xs-1"><button class="btn btn-danger fa fa-pencil" ng-click="editContact()"> EDIT</button></div>
         <div class="col-xs-1"><button class="btn btn-danger fa fa-trash-o" ng-click="deleteContact()"></button></div>
         <div class="row">
@@ -35,7 +35,7 @@
               <div>
                 <p>{{contact.group}}</p>
                 <div class="form-group row">
-                  <label class="col-sm-2 control-label text-right" for="textinput"><h6>Add to Group</h6></label>
+                  <label class="col-sm-6 control-label text-right" for="textinput"><h6>Add to Group</h6></label>
                   <div class="col-sm-6">
                     <select class="form-control">
                       <option>Family</option>
@@ -43,6 +43,12 @@
                       <option>Work</option>
                     </select>
                   </div>
+                </div>
+              </div>
+              <div>
+                <p>{{contact.favorite}}</p>
+                <div class="form-group row">
+                  <button class="btn btn-info btn-block btn-lg" ng-click="showFavsList()"><span><i class="fa fa-star" aria-hidden="true"></i></span> FAV</button>
                 </div>
               </div>
             </div>

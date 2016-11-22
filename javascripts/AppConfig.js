@@ -6,6 +6,10 @@ app.run(function(FIREBASE_CONFIG){
 
 app.config(function($routeProvider){
   $routeProvider
+    .when('/auth', {
+      templateUrl: 'partials/auth.html',
+      controller: 'AuthCtrl'
+    })
     .when('/contacts/list', {
       templateUrl: 'partials/all-contacts.html',
       controller: 'ContactsAllCtrl'
@@ -14,24 +18,20 @@ app.config(function($routeProvider){
       templateUrl: 'partials/add-contacts.html',
       controller: 'ContactsNewCtrl'
     })
-    .when('/contacts/list', {
+    .when('/contacts/favorites', {
       templateUrl: 'partials/all-favorites.html',
       controller: 'ContactsFavsCtrl'
     })
-    .when('/contacts/list', {
+    .when('/contacts/groups', {
       templateUrl: 'partials/all-groups.html',
       controller: 'ContactsGroupsCtrl'
     })
-    .when('/contacts/list', {
-      templateUrl: 'partials/login.html',
-      controller: 'ContactsLoginCtrl'
-    })
-    .when('/contacts/list', {
+    .when('/contacts/details', {
       templateUrl: 'partials/contact-details.html',
       controller: 'ContactsDetailCtrl'
     })
-    .when('/contacts/list', {
-      templateUrl: 'partials/edit.html',
+    .when('/contacts/edit/id', {
+      templateUrl: 'partials/add-contacts.html',
       controller: 'ContactsEditCtrl'
     })
     .otherwise('/contacts/list');

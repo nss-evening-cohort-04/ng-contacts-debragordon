@@ -2,9 +2,9 @@
 
 app.controller("ContactsLogoutCtrl", function ($scope, ContactFactory){
 
-// newContactForm FUNCTION
-// allContactList FUNCTION
-// showFavsList FUNCTION
-// showGroupList FUNCTION
+// showContactForm FUNCTION TO WRITE
+// showAllContacts FUNCTION TO WRITE
+// showFavsList FUNCTION TO WRITE
+// showGroupList FUNCTION TO WRITE
 
 });
