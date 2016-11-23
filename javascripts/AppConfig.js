@@ -6,33 +6,29 @@ app.run(function(FIREBASE_CONFIG){
 
 app.config(function($routeProvider){
   $routeProvider
+    .when('/auth', {
+      templateUrl: 'partials/auth.html',
+      controller: 'AuthCtrl'
+    })
     .when('/contacts/list', {
       templateUrl: 'partials/all-contacts.html',
-      controller: 'ContactsAllCtrl'
+      controller: 'ContactAllCtrl'
     })
     .when('/contacts/add', {
-      templateUrl: 'partials/add-contacts.html',
-      controller: 'ContactsNewCtrl'
+      templateUrl: 'partials/add-contact.html',
+      controller: 'ContactNewCtrl'
     })
-    .when('/contacts/list', {
-      templateUrl: 'partials/all-favorites.html',
-      controller: 'ContactsFavsCtrl'
-    })
-    .when('/contacts/list', {
+    .when('/contacts/groups', {
       templateUrl: 'partials/all-groups.html',
-      controller: 'ContactsGroupsCtrl'
+      controller: 'ContactGroupsCtrl'
     })
-    .when('/contacts/list', {
-      templateUrl: 'partials/login.html',
-      controller: 'ContactsLoginCtrl'
-    })
-    .when('/contacts/list', {
+    .when('/contacts/details/:id', {
       templateUrl: 'partials/contact-details.html',
-      controller: 'ContactsDetailCtrl'
+      controller: 'ContactDetailCtrl'
     })
-    .when('/contacts/list', {
-      templateUrl: 'partials/edit.html',
-      controller: 'ContactsEditCtrl'
+    .when('/contacts/edit/:id', {
+      templateUrl: 'partials/add-contact.html',
+      controller: 'ContactEditCtrl'
     })
     .otherwise('/contacts/list');
 });

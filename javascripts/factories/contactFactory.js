@@ -38,7 +38,8 @@ app.factory("ContactFactory", function($q, $http, FIREBASE_CONFIG) {
         state: newContact.state,
         zip: newContact.zip,
         country: newContact.country,
-        group: newContact.group
+        group: newContact.group,
+        favorite: newContact.favorite
         })
       )
         .success(function(postResponse){
@@ -50,6 +51,26 @@ app.factory("ContactFactory", function($q, $http, FIREBASE_CONFIG) {
     });
   };
 
-  return {getContactList:getContactList, postNewContact:postNewContact};
+  var deleteContact = function(itemId){
+
+  };
+
+  var getSingleContact = function(contactId){
+    return $q((resolve, reject)=>{
+      $http.get(`${FIREBASE_CONFIG.databaseURL}/contacts/${contactId}.json`)
+      .success(function(getSingleContactResponse){
+        resolve(getSingleContactResponse);
+      })
+      .error(function(getSingleContactError){
+        reject(getSingleContactError);
+      });
+    });
+  };
+
+  var editContact = function(editItem){
+
+  };
+
+  return {getContactList:getContactList, postNewContact:postNewContact, deleteContact:deleteContact, getSingleContact:getSingleContact, editContact:editContact};
 
 });

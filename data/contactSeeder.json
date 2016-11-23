@@ -16,7 +16,9 @@
       "state": "DE",
       "zip": 19713,
       "country": "United States",
-      "group": "Family"
+      "group": "Family",
+      "favorite": false,
+      "uid": ""
     },
     "contact1": {
       "firstName": "Ruth",
@@ -34,7 +36,9 @@
       "state": "FL",
       "zip": null,
       "country": "United States",
-      "group": "Family"
+      "group": "Family",
+      "favorite": false,
+      "uid": ""
     },
     "contact2": {
       "firstName": "Molly",
@@ -52,7 +56,19 @@
       "state": "OR",
       "zip": null,
       "country": "United States",
-      "group": "Friends"
+      "group": "Friends",
+      "favorite": true,
+      "uid": ""
+    }
+  },
+  "users": {
+    "user0": {
+      "uid": "",
+      "username": "Sample 1"
+    },
+    "user1": {
+      "uid": "",
+      "username": "Sample2"
     }
   }
 }
