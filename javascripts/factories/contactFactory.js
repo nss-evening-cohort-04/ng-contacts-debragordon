@@ -55,14 +55,22 @@ app.factory("ContactFactory", function($q, $http, FIREBASE_CONFIG) {
 
   };
 
-  var getSingleContact = function(itemId){
-
+  var getSingleContact = function(contactId){
+    return $q((resolve, reject)=>{
+      $http.get(`${FIREBASE_CONFIG.databaseURL}/contacts/${contactId}.json`)
+      .success(function(getSingleContactResponse){
+        resolve(getSingleContactResponse);
+      })
+      .error(function(getSingleContactError){
+        reject(getSingleContactError);
+      });
+    });
   };
 
   var editContact = function(editItem){
 
   };
 
-  return {getContactList:getContactList, postNewContact:postNewContact deleteContact:deleteContact, getSingleContact:getSingleContact, editContact:editContact};
+  return {getContactList:getContactList, postNewContact:postNewContact, deleteContact:deleteContact, getSingleContact:getSingleContact, editContact:editContact};
 
 });

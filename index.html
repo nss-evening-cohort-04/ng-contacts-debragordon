@@ -28,16 +28,16 @@
     <div class="container" ng-controller="NavCtrl"><!-- TOP Buttons -->
       <div class="row">
         <div class="col-sm-3">
-          <button class="btn btn-info btn-block btn-lg" ng-click="showContactForm()"><span><i class="fa fa-plus" aria-hidden="true"></i></span> Add New</button>
+          <a class="btn btn-info btn-block btn-lg" ng-href="#/contacts/add"><span><i class="fa fa-plus" aria-hidden="true"></i></span> Add New</a>
         </div>
         <div class="col-sm-3">
-          <button class="bt btn-info btn-block btn-lg" ng-click="showAllContacts()"><span><i class="fa fa-address-book fa-2" aria-hidden="true"></i></span> All Contacts</button>
+          <a class="bt btn-info btn-block btn-lg" ng-href="#/contacts/all"><span><i class="fa fa-address-book fa-2" aria-hidden="true"></i></span> All Contacts</a>
         </div>
         <div class="col-sm-3">
-          <button class="btn btn-info btn-block btn-lg" ng-click="showFavsList()"><span><i class="fa fa-star" aria-hidden="true"></i></span> Favorites</button>
+          <a class="btn btn-info btn-block btn-lg" ng-href="#/contacts/groups"><span><i class="fa fa-star" aria-hidden="true"></i></span> Favorites</a>
         </div>
         <div class="col-sm-3">
-          <button class="btn btn-info btn-block btn-lg" ng-click="showGroupList()"><span><i class="fa fa-users" aria-hidden="true"></i></span> Groups</button>
+          <a class="btn btn-info btn-block btn-lg" ng-href="#/contacts/groups"><span><i class="fa fa-users" aria-hidden="true"></i></span> Groups</a>
         </div>
       </div>
     </div>
@@ -69,6 +69,7 @@
   <script src="/javascripts/controllers/ContactAllCtrl.js"></script>
   <script src="/javascripts/controllers/ContactFavsCtrl.js"></script>
   <script src="/javascripts/controllers/ContactGroupsCtrl.js"></script>
+  <script src="/javascripts/controllers/NavCtrl.js"></script>
 
 </body>
 </html>

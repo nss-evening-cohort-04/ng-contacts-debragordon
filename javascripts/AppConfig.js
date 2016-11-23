@@ -12,27 +12,23 @@ app.config(function($routeProvider){
     })
     .when('/contacts/list', {
       templateUrl: 'partials/all-contacts.html',
-      controller: 'ContactsAllCtrl'
+      controller: 'ContactAllCtrl'
     })
     .when('/contacts/add', {
-      templateUrl: 'partials/add-contacts.html',
-      controller: 'ContactsNewCtrl'
-    })
-    .when('/contacts/favorites', {
-      templateUrl: 'partials/all-favorites.html',
-      controller: 'ContactsFavsCtrl'
+      templateUrl: 'partials/add-contact.html',
+      controller: 'ContactNewCtrl'
     })
     .when('/contacts/groups', {
       templateUrl: 'partials/all-groups.html',
-      controller: 'ContactsGroupsCtrl'
+      controller: 'ContactGroupsCtrl'
     })
-    .when('/contacts/details', {
+    .when('/contacts/details/:id', {
       templateUrl: 'partials/contact-details.html',
-      controller: 'ContactsDetailCtrl'
+      controller: 'ContactDetailCtrl'
     })
-    .when('/contacts/edit/id', {
-      templateUrl: 'partials/add-contacts.html',
-      controller: 'ContactsEditCtrl'
+    .when('/contacts/edit/:id', {
+      templateUrl: 'partials/add-contact.html',
+      controller: 'ContactEditCtrl'
     })
     .otherwise('/contacts/list');
 });

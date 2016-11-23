@@ -17,4 +17,8 @@ $scope.newContact = {};
     });
   };
 
+  $scope.clearContactForm = function(){
+    $scope.newContact = {};
+  };
+
 });

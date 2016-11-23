@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller("ContactsLogoutCtrl", function ($scope, ContactFactory){
+app.controller("NavCtrl", function ($scope, ContactFactory){
 
 // showContactForm FUNCTION TO WRITE
 // showAllContacts FUNCTION TO WRITE
