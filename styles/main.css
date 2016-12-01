@@ -3,7 +3,8 @@
   padding: 0; }
 
 body {
-  color: darkgray; }
+  color: darkgray;
+  font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif; }
 
 .container {
   margin-top: 20px; }
@@ -21,3 +22,10 @@ body {
 .panel-default > .panel-heading {
   background: white;
   border: none; }
+
+.horizontalMargin {
+  margin-left: 2px;
+  margin-right: 2px; }
+
+button {
+  font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif; }

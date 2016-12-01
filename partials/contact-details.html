@@ -3,57 +3,63 @@
   <div class="panel panel-default">
     <div class="panel-body">
       <div class="row">
-        <div class="col-xs-10">{{selectedContact.firstName}} {{selectedContact.lastName}}</div>
-        <div class="col-xs-1"><button class="btn btn-danger fa fa-pencil" ng-click="editContact()"> EDIT</button></div>
+        <div class="col-xs-10"><h3>{{selectedContact.firstName}} {{selectedContact.lastName}}</h3></div>
+        <div class="col-xs-1"><button class="btn btn-danger fa fa-pencil" ng-click="editContact()"></button></div>
         <div class="col-xs-1"><button class="btn btn-danger fa fa-trash-o" ng-click="deleteContact()"></button></div>
-        <div class="row">
-          <div class="col-xs-6">
-            <div class="col-xs-6">
+      </div>
+      <div class="row">
+          <div class="col-xs-3">
               <h6>Phone 1 </h6><span><p>{{selectedContact.phone1}}</p></span>
               <h6>Type </h6><span><p>{{selectedContact.phone1Type}}</p></span>
               <h6>Phone 2 </h6><span><p>{{selectedContact.phone2}}</p></span>
               <h6>Type </h6><span><p>{{selectedContact.phone2Type}}</p></span>
-            </div>
-            <div class="col-xs-6">
               <h6>Birthday </h6><span><p>{{selectedContact.birthday}}</p></span>
               <h6>Email </h6><span><p>{{selectedContact.emails}}</p></span>
-              <h6>URL </h6><span><p>{{selectedContact.url}}</p></span>
-            </div>
           </div>
-          <div class="col-xs-6">
-            <div class="col-xs-6">
-              <h6>Address </h6>
-              <h6>Line 1 </h6><span><p>{{selectedContact.phone1Type}}</p></span>
-              <h6>Line 2 </h6><span><p>{{selectedContact.phone1Type}}</p></span>
-              <h6>City </h6><span><p>{{selectedContact.phone1Type}}</p></span>
-              <h6>State </h6><span><p>{{selectedContact.phone1Type}}</p></span>
-              <h6>Zip </h6><span><p>{{selectedContact.phone1Type}}</p></span>
-              <h6>Country </h6><span><p>{{selectedContact.phone1Type}}</p></span>
-            </div>
-            <div class="col-xs-6">
-              <h6>Category</h6>
-              <div>
-                <p>{{selectedContact.group}}</p>
-                <div class="form-group row">
-                  <label class="col-sm-6 control-label text-right" for="textinput"><h6>Add to Group</h6></label>
-                  <div class="col-sm-6">
-                    <select class="form-control">
-                      <option>Family</option>
-                      <option>Favorites</option>
-                      <option>Work</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <p>{{selectedContact.favorite}}</p>
-                <div class="form-group row">
-                  <button class="btn btn-info btn-block btn-lg" ng-click="showFavsList()"><span><i class="fa fa-star" aria-hidden="true"></i></span> FAV</button>
+          <div class="col-xs-3">
+            <h6>Category</h6>
+            <div>
+              <p>{{selectedContact.group}}</p>
+              <div class="form-group row">
+                <label class="col-sm-6 control-label text-right" for="textinput"><h6>Add to Group</h6></label>
+                <div class="col-sm-6">
+                  <select class="form-control">
+                    <option>Family</option>
+                    <option>Favorites</option>
+                    <option>Work</option>
+                  </select>
                 </div>
               </div>
             </div>
+            <div>
+              <p>{{selectedContact.favorite}}</p>
+              <div class="form-group row">
+                <button class="btn btn-info btn-block btn-lg" ng-click="showFavsList()"><span><i class="fa fa-star" aria-hidden="true"></i></span> FAV</button>
+              </div>
+            </div>
           </div>
-        </div>
+          <div class="col-xs-3">
+              <h6>Address:</h6>
+              <div>
+                <p>{{selectedContact.addressLine1}}</p>
+              </div>
+              <div>
+                <p>{{selectedContact.addressLine2}}</p>
+              </div>
+              <div>
+                <p>{{selectedContact.city}}</p>
+              </div>
+              <div>
+                <p>{{selectedContact.state}}</p>
+              </div>
+              <div>
+                <p>{{selectedContact.zip}}</p>
+              </div>
+              <div>
+                <p>{{selectedContact.country}}</p>
+              </div>
+          </div>
+      </div>
     </div>
   </div>
 </div>

@@ -1,0 +1,33 @@
+ <div> <!-- TOP PAGE HEADER INFO SHOWN ON ALL PAGES -->
+
+  <div class="container"><!-- TOP HEADER-->
+    <div class="row">
+      <div class="col-sm-2 col-sm-offset-10">
+        <a href="#" class="btn btn-warning text-center center-block" ng-click="logoutUser()"><span class="fa fa-sign-out" aria-hidden="true"></span> Log out</a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <img src="/images/connex-logo-sm.png" alt="home" class="img-responsive center-block" id="top-logo">
+      </div>
+      <div class="col-sm-12">
+        <h1 class="text-center">CONTACTS</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" ng-controller="NavCtrl"><!-- TOP Buttons -->
+    <div class="row">
+      <div class="col-sm-4">
+        <a class="btn btn-info btn-block btn-lg" ng-href="#/contacts/add"><span><i class="fa fa-plus" aria-hidden="true"></i></span> Add New</a>
+      </div>
+      <div class="col-sm-4">
+        <a class="bt btn-info btn-block btn-lg" ng-href="#/contacts/all"><span><i class="fa fa-address-book" aria-hidden="true"></i></span> All Contacts</a>
+      </div>
+      <div class="col-sm-4">
+        <a class="btn btn-info btn-block btn-lg" ng-href="#/contacts/groups"><span><i class="fa fa-star" aria-hidden="true"></i></span> Favorites | Groups <span><i class="fa fa-users" aria-hidden="true"></i></span></a>
+      </div>
+    </div>
+  </div>
+
+</div>
