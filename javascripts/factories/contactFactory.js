@@ -20,7 +20,7 @@ app.factory("ContactFactory", function($q, $http, FIREBASE_CONFIG) {
     });
   };
 
-  var postNewContact = function(newItem){
+  var postNewContact = function(newContact){
     return $q((resolve, reject)=>{
       $http.post(`${FIREBASE_CONFIG.databaseURL}/contacts.json`, JSON.stringify({
         firstName: newContact.firstName,
@@ -31,7 +31,6 @@ app.factory("ContactFactory", function($q, $http, FIREBASE_CONFIG) {
         phone2Type: newContact.phone2Type,
         birthday: newContact.birthday,
         email: newContact.email,
-        url: newContact.url,
         addressLine1: newContact.addressLine1,
         addressLine2: newContact.addressLine2,
         city: newContact.city,
@@ -52,7 +51,15 @@ app.factory("ContactFactory", function($q, $http, FIREBASE_CONFIG) {
   };
 
   var deleteContact = function(itemId){
-
+    return $q((resolve, reject) => {
+      $http.delete(`${FIREBASE_CONFIG.databaseURL}/contacts/${contactId}.json`)
+      .success((deleteResponse) => {
+          resolve(deleteResponse);
+      })
+      .error((deleteError) => {
+          reject(deleteError);
+      });
+    });
   };
 
   var getSingleContact = function(contactId){
@@ -67,8 +74,36 @@ app.factory("ContactFactory", function($q, $http, FIREBASE_CONFIG) {
     });
   };
 
-  var editContact = function(editItem){
-
+  var editContact = function(editItem) {
+      console.log("factory edit", editItem);
+      return $q((resolve, reject)  => {
+          $http.put(`${FIREBASE_CONFIG.databaseURL}/contacts/${editItem.id}.json`,
+            JSON.stringify({
+              firstName: editItem.firstName,
+              lastName: editItem.lastName,
+              phone1: editItem.phone1,
+              phone1Type: editItem.phone1Type,
+              phone2: editItem.phone2,
+              phone2Type: editItem.phone2Type,
+              birthday: editItem.birthday,
+              email: editItem.email,
+              addressLine1: editItem.addressLine1,
+              addressLine2: editItem.addressLine2,
+              city: editItem.city,
+              state: editItem.state,
+              zip: editItem.zip,
+              country: editItem.country,
+              group: editItem.group,
+              favorite: editItem.favorite
+            })
+           )
+          .success((editResponse) => {
+              resolve(editResponse);
+          })
+          .error((editError) => {
+              reject(editError);
+          });
+      });
   };
 
   return {getContactList:getContactList, postNewContact:postNewContact, deleteContact:deleteContact, getSingleContact:getSingleContact, editContact:editContact};
